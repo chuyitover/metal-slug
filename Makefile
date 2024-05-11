@@ -1,4 +1,4 @@
-bin/metal-slug : src/test.cpp
+bin/metalslug : src/test.cpp
 	g++ -o bin/metal-slug src/main.cpp -Iinclude -lftxui-screen -lftxui-dom -lftxui-component
 output = bin
 source = src
@@ -7,10 +7,10 @@ dependencias = -lftxui-screen -lftxui-dom -lftxui-component
 flags = -std=c++2a $(dependencias) $(include)
 
 
-run : $(output)/metal-slug 
+run : $(output)/metalslug 
 	./$<
 
-$(output)/metal-slug : $(source)/main.cpp 
+$(output)/metalslug : $(source)/main.cpp 
 	g++ -o $@ $< $(flags)
 
 
